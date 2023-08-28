@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block title%} Home Page {% endblock%}
+{% block content %}
+
+<h1> Hello HTMX! </h1>
+<button hx-get = "/hello/" hx-target = "#message">
+    Click me 
+</button>
+<div id = "message"> This should change when you click the button above me</div>
+<script src="https://unpkg.com/htmx.org/dist/htmx.js"></script>
+
+{% endblock %}

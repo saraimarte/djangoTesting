@@ -1,7 +1,15 @@
 {% extends "base.html" %} {% block title%} Home Page {% endblock%}
 {% block content %}
-<p> This is the home page</p>
-<div hx-post = "/todos">
-    Put to Messages
+
+
+<div id = "create-form">
+    <form action = '/create/' method = "post">
+        <input name = "name" placeholder="Name"> 
+        <input name = "age" placeholder="Age"> 
+        <button href="/create/" hx-post="create" hx-target="#create-form" type = "submit"> Create </button>
+    </form>
 </div>
+
+
+
 {% endblock %}
